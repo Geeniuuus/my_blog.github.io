@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Press Start 2P&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+h3{
+    font-family: 'Press Start 2P', 'serif';
+    margin-top: 50px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h2{
+    font-weight: 100;
+}
+.line{
+    height: 2px;
+    width: auto;
+    background-color: black;
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.card{
+    height: 430px;
+    width: 400px;
+    border: solid 2px black;
+    margin: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); 
+    display: inline-block;
+}
+
+.card img{
+    height: 350px;
+    width: 350px;
+    padding-block: 15px;
+}
+.card h2{
+    padding-inline-start: 20px;
+}
+.btn-m{
+    height: 20px;
+    width: 70px;
+    background-color: blue;
+    margin-inline-start: 310px;
+    border: 0.1px solid #ffffff; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.block-me{
+    height: 350px;
+    width: 900px;
+    border: solid 1px black;
+    margin: 30px;
+    margin-bottom: 80px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.txt-me{
+    margin: 5px;
+}
+
+.block img {
+    width: 70px;
+}
+.goals{
+    display: flex;
+    justify-content: space-between;
+}
+h4{
+    font-weight: 100;
+    font-size: large;
+    margin-top: 40px;
+}
+.block {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    overflow: hidden;
+    height: 270px;
+    width: 470px;
+    border: solid 1px black;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 50px;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.front {
+    z-index: 2;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.back {
+    z-index: 1;
+    opacity: 0;
+    transform: scale(0.95);
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white; /* или другой цвет фона */
+}
+.back p{
+    font-size: 20px;
+}
+.block:hover .front {
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+.block:hover .back {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+.block-p{
+    height: 400px;
+    width: 370px;
+    border: solid 1px black;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 50px;
+}
+.block-p img{
+    width: 200px;
+}
+
+.img-switch {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    overflow: visible;
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+}
+
+.img-switch:hover {
+    transform: scale(1.05); 
+}
+
+.img-switch img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.4s ease;
+}
+
+
+.img-hover {
+    opacity: 0;
+    z-index: 1;
+    transform: scale(1);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+.img-default {
+    z-index: 2;
+}
+
+.img-switch:hover .img-default {
+    opacity: 0;
+}
+
+
+.img-switch:hover .img-hover {
+    opacity: 1;
+    transform: scale(1); 
+}
+
+footer {
+    background-color: black;
+    height: 80px; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-top: 50px;
+}
+
+footer p {
+    color: white;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.foot-img {
+    display: flex;
+    gap: 40px; 
+}
+
+.foot-img img {
+    width: 80px;
+    height: 60px;
+    border: solid 0.5px white;
+    border-radius: 25px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.go_back{
+    background-color: black;
+    height: 30px;
+    width: 450px;
+
+}
+.go_back a p{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
